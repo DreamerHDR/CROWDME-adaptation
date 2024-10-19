@@ -1,0 +1,831 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	background-color: rgb(255, 255, 255);
+}
+
+.header_section {
+	padding: 1vw;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap; 
+}
+
+.header-h1 {
+	color: grey;
+	font-size: 2vw; /* Используем vw для масштабирования */
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+	width: 2vw; /* Используем проценты для масштабирования */
+	height: auto; /* Сохраняем пропорции изображения */
+}
+
+.header-nav {
+	font-size: 1vw;
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap; /* Добавлено для адаптации на мобильных устройствах */
+}
+
+.header-nav a {
+	padding: 1vw 1.5vw; /* Используем vw для масштабирования */
+	text-decoration: none;
+	color: gray;
+}
+
+.nav-item {
+	color: gray;
+}
+
+.headernav li {
+	margin-right: 2vw; /* Используем vw для масштабирования */
+}
+
+.header-btn {
+	background-color: rgb(143, 207, 47);
+	border: none;
+	border-radius: 10vw; /* Используем фиксированное значение для закругленности */
+	padding: 1vw 2vw; /* Используем vw для масштабирования */
+	text-transform: uppercase;
+	color: white;
+	font-size: 1vw; /* Используем vw для масштабирования */
+}
+
+@media (max-width: 768px) {
+	.header_section {
+			flex-direction: column;
+	}
+
+	.header-nav {
+			flex-direction: column;
+	}
+
+	.header-nav a {
+			padding: 10px 0;
+			font-size: 4vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+
+	.header-nav li {
+			margin-bottom: 10px; /* Добавляем отступы между элементами списка */
+	}
+
+	.logo {
+		margin-bottom: 5px; /* Добавляем отступ между логотипом и навигационным меню */
+}
+
+	.header-btn {
+		padding: 0.5rem 1rem;
+		font-size: 3vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+}
+
+
+
+
+.menu {
+    display: none;
+}
+.menu-btn {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	z-index:2;
+
+}
+.menu-btn span {
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color:  rgb(143, 207, 47);
+}
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 10px);
+}
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 10px);
+}
+@media (width<768px) {
+    .header__section {
+        display: none;
+    }
+
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 2rem;
+    }
+
+    .header__navlist {
+        display: block;
+    }
+
+}
+
+/* 1 */
+.s1 {
+    background-image: url(../img/2.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+    color: white;
+}
+
+.s1 h1 {
+	font-size: 4vw; /* Используем vw для масштабирования */
+	margin-bottom: 2%;
+}
+
+.s1 p {
+	font-size: 2vw; /* Используем vw для масштабирования */
+	margin-bottom: 5%;
+}
+
+
+.s1-btn {
+	background-color: rgb(143, 207, 47);
+	border: none;
+	border-radius: 10vw; /* Используем фиксированное значение для закругленности */
+	padding: 1vw 2vw; /* Используем vw для масштабирования */
+	font-size: 1vw; /* Используем vw для масштабирования */
+	color: white;
+	font-weight: 600;
+}
+
+@media (max-width: 768px) {
+		.s1 h1 {
+				font-size: 6vw; /* Увеличиваем размер шрифта для мобильных устройств */
+		}
+
+		.s1 p {
+				font-size: 4vw; /* Увеличиваем размер шрифта для мобильных устройств */
+		}
+
+		.s1-btn {
+				padding: 2vw 4vw; /* Используем vw для масштабирования */
+				font-size: 4vw; /* Увеличиваем размер шрифта для мобильных устройств */
+		}
+}
+
+.s2 {
+	margin-top: 5%;
+
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+
+	position: relative;
+	width: 100%; /* Добавляем ширину 100% */
+}
+
+.s2-a {
+	max-width: 50%; 
+	padding: 5% 5%;
+}
+
+.s2-a h1 {
+	font-size: 2vw; /* Используем vw для масштабирования */
+	margin-bottom: 5%;
+}
+
+.s2-a p {
+	font-size: 1vw; /* Используем vw для масштабирования */
+	margin-bottom: 3%;
+	color: gray;
+}
+
+.s2-a img {
+	width: 3vw; /* Используем vw для масштабирования */
+	height: auto; /* Сохраняем пропорции изображения */
+	margin-bottom: 5%; /* Добавляем отступ снизу */
+}
+
+@media (max-width: 768px) {
+	.s2-a h1 {
+			font-size: 6vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+
+	.s2-a p {
+			font-size: 4vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+
+	.s2-a img {
+			width: 10vw; /* Увеличиваем ширину изображения для мобильных устройств */
+	}
+}
+
+/* 3 */
+.s3 {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.s3-a {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /* max-width: 1000px; */
+    gap: 10%;
+    margin-bottom: 5%;
+}
+
+.s3-num {
+    width: 3vw;
+    height: 3vw; 
+    border-radius: 50%;
+    background-color: rgb(143, 207, 47);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 1vw;
+		margin-top: -10px; /* Добавляем отрицательный отступ сверху */
+}
+
+.s3-t{
+ 		font-size: 2vw; 
+}
+.s3-a-num_holder {
+    display: flex;
+}
+
+.s3-a-num_holder2 {
+    display: flex;
+}
+
+.s3-a-num_holder p {
+
+	font-size: 2vw; 
+}
+
+
+.s3-a2 {
+    max-width: 50vw;
+    display: flex;
+    text-align: left;
+    /* padding: 5% 5%; */
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.s3-a2 img {
+	width: 100%; /* Устанавливаем ширину 100% */
+	max-width: 30vw; /* Устанавливаем максимальную ширину */
+	height: auto; /* Сохраняем пропорции изображения */
+	transition: width 0.3s ease; /* Добавляем плавный переход */
+}
+
+.s3-a2-div {
+    margin: 0 0 0 15%;
+}
+
+.s3-a2-div p {
+		font-size: 1vw; 
+    color: gray;
+}
+
+.s3-a2-div h1 {
+    margin-bottom: 5%;
+    color: rgb(143, 207, 47);
+    font-size: 2vw;
+}
+
+@media (max-width: 768px) {
+	.s3-a2 img {
+			width: 50%;	
+			margin: 0 auto;
+			margin-bottom: 5%;
+	}
+
+	.s3-a2 {
+			flex-direction: column;
+	}
+
+	.s3-num {
+		width: 8vw; /* Уменьшаем ширину изображения для мобильных устройств */
+		height: 8vw; /* Уменьшаем высоту изображения для мобильных устройств */
+		font-size: 2.5vw; /* Уменьшаем размер шрифта для мобильных устройств */
+}
+
+	.s3-t {
+			font-size: 4vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+
+	.s3-a-num_holder p {
+			font-size: 4vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+
+	.s3-a2-div h1 {
+    font-size: 5vw; /* Увеличиваем размер шрифта */
+    width: 100%; /* Растягиваем по ширине */
+}
+
+.s3-a2-div p {
+    font-size: 4vw; /* Увеличиваем размер шрифта */
+    width: 100%; /* Растягиваем по ширине */
+}
+
+}
+
+
+/* 4 */
+.s4 {
+    margin-top: 5%;
+
+}
+
+.s4-a {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.s4-a-div1-right {
+    width: 100%;
+    text-align: left;
+    background-color: rgba(0, 140, 255, 0.171);
+}
+
+.s4-a-div1-left {
+    width: 100%;
+    text-align: left;
+    background-color: rgba(0, 255, 76, 0.171);
+}
+
+.s4-a-div1-card {
+    display: flex;
+    padding: 5%;
+    margin-left: 10%;
+}
+
+.s4-a-div1-card-left {
+    display: flex;
+    padding: 5%;
+    margin-left: 10%;
+}
+
+.s4-a-div1-card h2,
+.s4-a-div1-card-left h2 {
+    margin-bottom: 4%;
+		font-size: 2vw; /* Увеличиваем размер шрифта */
+}
+
+.s4-a-div1-card p,
+.s4-a-div1-card-left p {
+    margin-bottom: 2%;
+    color: gray;
+    width: 50%;
+		font-size: 1.5vw; /* Увеличиваем размер шрифта */
+}
+
+.s4-a-div1-card div,
+.s4-a-div1-card-left div {
+    margin-left: 5%;
+}
+
+.s4-btn,
+.s4-btn-left {
+    background-color: rgb(47, 130, 207);
+    border: none;
+    border-radius: 1vw;
+    width: 10vw; /* Увеличиваем ширину кнопки */
+    height: 2vw; /* Увеличиваем высоту кнопки */
+    color: white;
+    font-size: 1vw; /* Увеличиваем размер шрифта */
+    font-weight: 600;
+		display: block; /* Делаем кнопку блочным элементом */
+		margin: 0 auto; /* Центрируем кнопку */
+		margin-left: -0.5vw; /* Смещаем кнопку левее */
+}
+
+
+.s4-img {
+	width: 10vw; /* Увеличиваем размер изображения */
+	height: 10vw; /* Увеличиваем размер изображения */
+}
+
+.s4-btn-left {
+    background-color: rgb(47, 207, 74);
+}
+
+@media (max-width: 768px) {
+	.s4-a {
+			flex-direction: column; /* Изменяем направление на колонку для мобильных устройств */
+	}
+
+	.s4-a-div1-card,
+	.s4-a-div1-card-left {
+			margin-left: 0; /* Убираем отступ для мобильных устройств */
+			flex-direction: column; /* Изменяем направление на колонку для мобильных устройств */
+			align-items: center; /* Центрируем элементы */
+	}
+
+	.s4-a-div1-card h2,
+	.s4-a-div1-card-left h2 {
+			text-align: center; /* Центрируем текст */
+			font-size: 6vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+
+	.s4-a-div1-card p,
+	.s4-a-div1-card-left p {
+			width: 100%; /* Растягиваем текст по ширине */
+			font-size: 5vw; /* Увеличиваем размер шрифта для мобильных устройств */
+			text-align: justify; /* Выравниваем текст по ширине */
+	}
+
+	.s4-btn,
+	.s4-btn-left {
+			width: 80%; /* Увеличиваем ширину кнопки для мобильных устройств */
+			height: 3rem; /* Увеличиваем высоту кнопки для мобильных устройств */
+			font-size: 4vw; /* Увеличиваем размер шрифта для мобильных устройств */
+			display: block; /* Делаем кнопку блочным элементом */
+			margin: 0 auto; /* Центрируем кнопку */
+	}
+	
+
+	.s4-img {
+			width: 20vw; /* Увеличиваем размер изображения для мобильных устройств */
+			height: 20vw; /* Увеличиваем размер изображения для мобильных устройств */
+	}
+}
+
+
+.s5 {
+
+    margin-top: 5%;
+
+}
+
+.s5-a1,
+.s5-a2 {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    align-items: center;
+    margin-bottom: 5%;
+    padding: 1%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.s5-a1 p {
+    font-size: 1vw;
+    color: gray;
+    margin-bottom: 2%;
+}
+
+.s5-a1 h2 {
+    font-size: 2vw;
+    margin-bottom: 2%;
+}
+
+.s5-btn {
+	background-color: rgba(255, 255, 255, 0);
+	border: 0.1vw solid rgb(100, 100, 100); /* Используем vw для обводки */
+	border-radius: 1.2vw; /* Используем vw для радиуса */
+	width: 10vw; /* Используем vw для ширины */
+	height: 3.5vw; /* Используем vw для высоты */
+	color: rgb(100, 100, 100);
+	font-size: 1vw; /* Используем vw для размера шрифта */
+}
+
+@media (max-width: 768px) {
+	.s5-a1,
+	.s5-a2 {
+			flex-direction: column; /* Изменяем направление на колонку для мобильных устройств */
+	}
+
+	.s5-a1 p {
+			font-size: 3vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+
+	.s5-a1 h2 {
+			font-size: 4vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+
+	.s5-btn {
+			width: 30vw; /* Увеличиваем ширину кнопки для мобильных устройств */
+			height: 10vw; /* Увеличиваем высоту кнопки для мобильных устройств */
+			font-size: 3vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+}
+
+
+
+.s5-a2 {
+    padding: 2%;
+		gap: 40px; /* Отступ между картами */
+    justify-content: space-evenly;
+}
+
+.s5-a2-div-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(242, 242, 242, 0.678);
+    border-radius: 15px;
+    border: 1px solid rgb(215, 215, 215);
+}
+
+/* Основной размер текста */
+.card-desc h2 {
+	font-size: 1vw;
+}
+
+.card-desc p {
+	font-size: 0.5vw;
+}
+
+
+.card-holder {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.card-holder h2 {
+    font-size: 1vw;
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+
+.card-holder p {
+    font-size: 0.8vw;
+    margin-bottom: 5%;
+}
+
+.line-main {
+    width: 90%;
+    background-color: rgb(223, 218, 218);
+    border-radius: 15px;
+    margin-bottom: 5%;
+    border-top: 5%;
+}
+
+.line {
+    width: 90%;
+    background-color: rgb(47, 207, 74);
+    border-radius: 15px;
+    color: rgb(47, 207, 74);
+}
+
+.card-desc2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-desc3 {
+    margin-top: 5%;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+	.card-desc h2,
+	.card-holder h2 {
+			font-size: 4vw; /* Увеличиваем размер шрифта для мобильных устройств */
+			text-align: center; /* Центрируем текст */
+	}
+
+	.card-desc p,
+	.card-holder p {
+			font-size: 3vw; /* Увеличиваем размер шрифта для мобильных устройств */
+			text-align: center; /* Центрируем текст */
+	}
+
+	.card-holder {
+			margin-left: 5%; /* Уменьшаем отступы для мобильных устройств */
+			margin-right: 5%; /* Уменьшаем отступы для мобильных устройств */
+	}
+
+	.line-main,
+	.line {
+			width: 100%; /* Растягиваем линии по ширине */
+	}
+
+	.card-desc2 {
+			flex-direction: column; /* Изменяем направление на колонку для мобильных устройств */
+			align-items: center; /* Центрируем элементы */
+	}
+
+	.card-desc3 {
+			text-align: center; /* Центрируем текст */
+	}
+}
+
+/* 6 */
+.s6 {
+    background-image: url(../img/9.jpg);
+    width: 100%;
+    height: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.s6-a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.s6-a h1 {
+	font-size: 2.5vw;
+	margin-bottom: 2%;
+	color: rgb(47, 207, 74);
+	margin-top: 5%;
+	width: 100%; /* Растягиваем текст по ширине */
+}
+
+.s6-a p {
+	font-size: 1vw;
+	margin-bottom: 2%;
+	color: gray;
+	width: 100%; /* Растягиваем текст по ширине */
+}
+
+.s6-a2 {
+		margin-top: 3%;
+		display: flex;
+		gap: 25%;
+}
+
+.s6-a2-card {
+    width: 80%;
+		padding: 100px;
+    flex-direction: column;
+}
+
+.s6-a2-card-comm {
+	background-color: white;
+	padding: 1.5vw; /* Используем vw для отступов */
+	border-radius: 1.5vw; /* Используем vw для радиуса */
+}
+
+.s6-a2-card-comm h2 {
+		font-size: 2vw;
+    color: rgb(47, 207, 74);
+    margin-bottom: 5%;
+}
+
+.s6-a2-card-comm p {
+	font-size: 1vw;
+    color: gray;
+ 
+}
+
+.s6-a2-card-char img {
+	border-radius: 2vw; /* Используем vw для радиуса */
+	margin-right: 1vw; /* Используем vw для отступов */
+	margin-top: 1vw; /* Используем vw для отступов */
+	margin-bottom: 1vw; /* Используем vw для отступов */
+	width: 5vw; /* Используем vw для ширины изображения */
+	height: 5vw; /* Используем vw для высоты изображения */
+}
+
+
+.s6-a2-card-char {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.s6-a2-card-char p {
+	font-size: 1vw; /* Используем vw для размера шрифта */
+	color: black;
+}
+
+.triangle {
+    margin-left: 20%;
+    width: 10px;
+    border: 20px solid transparent;
+    border-left: 20px solid rgb(255, 255, 255);
+    border-top: 20px solid rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+	.s6-a h1 {
+			font-size: 6vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+
+	.s6-a p {
+			font-size: 4vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+
+	.s6-a2 {
+			flex-direction: column; /* Изменяем направление на колонку для мобильных устройств */
+			gap: 10%; /* Увеличиваем зазор для мобильных устройств */
+	}
+
+	.s6-a2-card {
+			width: 80%; /* Растягиваем карточки по ширине */
+			padding: 10vw; /* Используем vw для отступов */
+	}
+
+	.s6-a2-card-comm h2 {
+			font-size: 5vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+
+	.s6-a2-card-comm p {
+			font-size: 4vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+
+	.s6-a2-card-char img {
+			width: 20vw; /* Увеличиваем размер изображения для мобильных устройств */
+			height: 20vw; /* Увеличиваем размер изображения для мобильных устройств */
+			margin-left: -5vw; /* Смещаем изображение левее */
+	}
+
+	.s6-a2-card-char p {
+			font-size: 4vw; /* Увеличиваем размер шрифта для мобильных устройств */
+	}
+
+	.triangle {
+			margin-left: 10vw; /* Используем vw для отступов */
+			width: 5vw; /* Используем vw для размера */
+			border: 5vw solid transparent; /* Используем vw для границ */
+			border-left: 5vw solid rgb(255, 255, 255); /* Используем vw для границ */
+			border-top: 5vw solid rgb(255, 255, 255); /* Используем vw для границ */
+	}
+}
+
+.footer {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2vw;
+}
+
+@media (max-width: 768px) {
+	.footer {
+			font-size: 4vw; /* Увеличиваем размер шрифта для мобильных устройств */
+			padding: 5%; /* Добавляем отступы для мобильных устройств */
+	}
+}
